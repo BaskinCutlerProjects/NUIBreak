@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Stretches">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="Stretch">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Description" type="xs:string" />
+              <xs:element maxOccurs="unbounded" name="Rule">
+                <xs:complexType>
+                  <xs:attribute name="Type" use="required">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="Compare" />
+                        <xs:enumeration value="Distance" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="Joint1" type="xs:string" use="required" />
+                  <xs:attribute name="Joint2" type="xs:string" use="required" />
+                  <xs:attribute name="Operator" use="required">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="LT" />
+                        <xs:enumeration value="GT" />
+                        <xs:enumeration value="EQ" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="Axis" use="required">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="X" />
+                        <xs:enumeration value="Y" />
+                        <xs:enumeration value="Z" />
+                        <xs:enumeration value="All" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="Range" type="xs:float" use="optional" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="Name" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

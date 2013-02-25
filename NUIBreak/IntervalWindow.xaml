@@ -1,0 +1,12 @@
+﻿<Window x:Class="NUIBreak.IntervalWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Set Kinect Break Interval"
+        SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen">
+    <StackPanel>
+        <TextBlock Name="Instructions" Text="How often (in minutes) would you like NUIBreak to appear?" Margin="25" />
+        <TextBox Name="IntervalValue" Width="120" />
+        <TextBlock Name="Error" Margin="25,25,25,0" Foreground="Red" Visibility="Collapsed" TextAlignment="Center" />
+        <Button Content="OK" Margin="25" Name="OkButton" Click="OkButton_Click" IsDefault="True" />
+    </StackPanel>
+</Window>

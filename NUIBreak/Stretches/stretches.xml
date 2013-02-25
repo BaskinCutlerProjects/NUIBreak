@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Stretches>
+  <Stretch Name="LeftHandOverHead">
+    <Description>Put your left hand above your head.</Description>
+    <Rule Type="Compare" Joint1="Head" Joint2="HandLeft" Operator="LT" Axis="Y" />
+    <Rule Type="Distance" Joint1="Head" Joint2="HandLeft" Operator="LT" Range="0.25" Axis="X" />
+    <Rule Type="Distance" Joint1="Head" Joint2="HandLeft" Operator="LT" Range="0.25" Axis="Z" />
+  </Stretch>
+  <Stretch Name="RightHandOverHead">
+    <Description>Put your right hand above your head.</Description>
+    <Rule Type="Compare" Joint1="Head" Joint2="HandRight" Operator="LT" Axis="Y" />
+    <Rule Type="Distance" Joint1="Head" Joint2="HandRight" Operator="LT" Range="0.25" Axis="X" />
+    <Rule Type="Distance" Joint1="Head" Joint2="HandRight" Operator="LT" Range="0.25" Axis="Z" />
+  </Stretch>
+  <Stretch Name="LeftHello">
+    <Description>Hold your left hand next to your head like you're waving hello.</Description>
+    <Rule Type="Distance" Joint1="Head" Joint2="HandLeft" Operator="GT" Range="0.25" Axis="X" />
+    <Rule Type="Distance" Joint1="Head" Joint2="HandLeft" Operator="LT" Range="0.25" Axis="Y" />
+    <Rule Type="Distance" Joint1="Head" Joint2="HandLeft" Operator="LT" Range="0.25" Axis="Z" />
+  </Stretch>
+  <Stretch Name="RightHello">
+    <Description>Hold your right hand next to your head like you're waving hello.</Description>
+    <Rule Type="Distance" Joint1="Head" Joint2="HandRight" Operator="GT" Range="0.25" Axis="X" />
+    <Rule Type="Distance" Joint1="Head" Joint2="HandRight" Operator="LT" Range="0.25" Axis="Y" />
+    <Rule Type="Distance" Joint1="Head" Joint2="HandRight" Operator="LT" Range="0.25" Axis="Z" />
+  </Stretch>
+  <Stretch Name="HandsJoined">
+    <Description>Join your two hands together in front of you.</Description>
+    <Rule Type="Distance" Joint1="HandLeft" Joint2="HandRight" Operator="LT" Range="0.1" Axis="All" />
+  </Stretch>
+  <Stretch Name="ShoulderLeft">
+    <Description>Stretch your left arm across your body and use your right arm to hold it towards you.</Description>
+    <Rule Type="Compare" Joint1="HandLeft" Joint2="ShoulderRight" Operator="GT" Axis="X" />
+    <Rule Type="Compare" Joint1="HandRight" Joint2="ElbowLeft" Operator="LT" Axis="Z" />
+    <Rule Type="Compare" Joint1="HandRight" Joint2="ElbowLeft" Operator="GT" Axis="Y" />
+  </Stretch>
+  <Stretch Name="ShoulderRight">
+    <Description>Stretch your right arm across your body and use your left arm to hold it towards you.</Description>
+    <Rule Type="Compare" Joint1="HandRight" Joint2="ShoulderLeft" Operator="LT" Axis="X" />
+    <Rule Type="Compare" Joint1="HandLeft" Joint2="ElbowRight" Operator="LT" Axis="Z" />
+    <Rule Type="Compare" Joint1="HandLeft" Joint2="ElbowRight" Operator="GT" Axis="Y" />
+  </Stretch>
+  <Stretch Name="HeadLeft">
+    <Description>Lean your head to your left.</Description>
+    <Rule Type="Compare" Joint1="Head" Joint2="ShoulderCenter" Operator="LT" Axis="X" />
+  </Stretch>
+  <Stretch Name="HeadRight">
+    <Description>Lean your head to your right.</Description>
+    <Rule Type="Compare" Joint1="Head" Joint2="ShoulderCenter" Operator="GT" Axis="X" />
+  </Stretch>
+  <Stretch Name="LeftKneeUp">
+    <Description>Hold your left knee up in front of you.</Description>
+    <Rule Type="Distance" Joint1="KneeLeft" Joint2="HipLeft" Operator="LT" Axis="X" Range=".2"/>
+    <Rule Type="Distance" Joint1="KneeLeft" Joint2="HipLeft" Operator="LT" Axis="Y" Range=".1"/>
+  </Stretch>
+  <Stretch Name="RightKneeUp">
+    <Description>Hold your right knee up in front of you.</Description>
+    <Rule Type="Distance" Joint1="KneeRight" Joint2="HipLeft" Operator="LT" Axis="X" Range=".2"/>
+    <Rule Type="Distance" Joint1="KneeRight" Joint2="HipLeft" Operator="LT" Axis="Y" Range=".1"/>
+  </Stretch>
+</Stretches>
