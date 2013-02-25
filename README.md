@@ -2,7 +2,7 @@
 
 By [Robert Baskin](http://www.rsbaskin.com) and [Max Cutler](http://maxcutler.com)
 
-Announcement: [http://blog.rsbaskin.com/post/3717628154/shoevox-voice-control-for-your-pc](http://blog.rsbaskin.com/post/3717628154/shoevox-voice-control-for-your-pc)
+Announcement: [http://blog.rsbaskin.com/post/43940364736/introducing-nuibreak](http://blog.rsbaskin.com/post/43940364736/introducing-nuibreak)
 
 ---------------
 
